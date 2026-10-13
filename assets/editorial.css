@@ -1,0 +1,71 @@
+/* Editorial visual system: a bibliographic atlas, not a generic analytics skin. */
+:root { --bg:#f3f0e8; --ink:#2d2927; --muted:#665f58; --card:#fcfaf5; --brand:#275e58; --accent:#aa6749; --line:#dcd4c7; --paper:#fffdf7; --deep:#302824; }
+html {scroll-behavior:smooth}
+body {font-family:"Noto Sans Hebrew","Arial",sans-serif; background:#f3f0e8; color:var(--ink);}
+body::before {content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(#7f6d54 0.45px,transparent .6px);background-size:8px 8px;opacity:.04}
+.topbar {background:var(--paper);border-bottom:1px solid var(--line);color:var(--ink);padding:17px clamp(20px,4.5vw,80px);align-items:center;gap:25px;position:relative}
+.topbar::after {content:"";position:absolute;inset-inline:0;bottom:0;height:2px;background:linear-gradient(90deg,#2e6b67 0 30%,#aa6749 30% 75%,#d7b781 75%)}
+.topbar-brand {gap:2px;flex:1}
+.masthead-eyebrow {font:600 11px/1.5 Arial,sans-serif;letter-spacing:.14em;color:var(--accent)}
+.topbar h1 {font-family:"Noto Serif Hebrew","David","Times New Roman",serif;font-weight:700;letter-spacing:-.035em;font-size:clamp(27px,2.7vw,38px);margin:0}
+.topbar p {font-size:12px;color:var(--muted);margin:0;line-height:1.6}
+.topbar p strong {color:var(--brand)}
+.top-logos{order:3;margin-top:4px}.logo-img {width:34px;height:34px;border-radius:0;border:1px solid var(--line);object-fit:contain;background:#fff}
+.edition-mark {border:1px solid #c8b3a1;background:#f3e9db;color:#704b40;font-family:"David",Georgia,serif;font-size:27px;font-weight:700;text-align:center;line-height:1;padding:12px 17px 7px;min-width:106px;transform:rotate(-3deg)}
+.edition-mark span{display:block;margin-top:7px;font:9px/1.5 Georgia,serif;letter-spacing:.07em}
+.topbar-actions{justify-content:flex-end;max-width:570px;gap:8px}.topbar-actions .mode-label {display:none}
+.topbar-actions label{font-size:11px;color:var(--muted)}
+main {max-width:1680px;padding:0 clamp(14px,3.7vw,70px) 55px}
+.tabs {border-bottom:1px solid var(--line);margin:0 0 27px;display:flex;flex-wrap:nowrap;overflow:auto;gap:0;scrollbar-width:thin}
+.tab-btn {border:0;border-bottom:2px solid transparent;padding:15px 16px 12px;border-radius:0;background:transparent;color:#615c54;white-space:nowrap;font-size:13px}
+.tab-btn:hover{background:#eae3d8}.tab-btn.active{background:transparent;border-color:var(--brand);color:var(--brand);font-weight:700}
+.btn {background:var(--brand);border-color:var(--brand)}.btn.ghost{background:var(--paper);color:var(--brand)}
+.card {border-radius:4px;box-shadow:0 8px 24px rgba(38,32,24,.035)}
+.help-card {border-inline-start:3px solid var(--accent);background:#fbf6ec}
+.table-wrap{border-radius:3px}
+#network, #egoNetwork, #treeNetwork, #geoMap {background:var(--paper);border-radius:3px}
+input,select,button{border-radius:4px}
+input:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.atlas-hero {display:grid;grid-template-columns:1.1fr .9fr;min-height:385px;background:#eee8dc;border:1px solid #d7ccbb;overflow:hidden;position:relative}
+.atlas-hero:before {content:"";position:absolute;inset-inline-start:36px;top:32px;bottom:32px;border-inline-start:1px solid #c3b5a0;opacity:.55}
+.atlas-hero-text {padding:clamp(28px,4vw,62px) clamp(25px,5.3vw,90px);z-index:1;display:flex;align-items:flex-start;justify-content:center;flex-direction:column}
+.atlas-kicker,.atlas-overline,.atlas-figure-kicker{letter-spacing:.09em;color:var(--accent);font-size:12px;font-weight:700}
+.atlas-hero-text h2{font:700 clamp(36px,4.3vw,64px)/1.16 "Noto Serif Hebrew","David","Times New Roman",serif;white-space:pre-line;letter-spacing:-.055em;margin:17px 0 18px;max-width:700px}
+.atlas-hero-text p{font-size:16px;line-height:1.9;max-width:640px;color:#565047;margin:0 0 28px}
+.atlas-hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+.atlas-primary,.atlas-secondary{border:1px solid var(--brand);background:var(--brand);color:#fff;font-weight:700;padding:11px 20px;cursor:pointer;font-size:13px}
+.atlas-secondary{background:transparent;color:var(--brand)}
+.atlas-primary:hover{background:#1b443f}.atlas-secondary:hover{background:#e7e5db}
+.atlas-hero-visual{background:#dfd5c3;min-height:360px;overflow:hidden;position:relative;display:grid;place-items:center;border-inline-start:1px solid #cbbb9e}
+.atlas-hero-visual:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 29px,#cabca73b 30px),repeating-linear-gradient(90deg,transparent,transparent 29px,#cabca73b 30px)}
+.atlas-constellation{width:min(98%,560px);position:relative;filter:drop-shadow(0 4px 14px #5b473323)}
+.atlas-stamp{position:absolute;top:20px;inset-inline-end:21px;font:700 17px/1.1 "David",serif;color:#7d5448;text-align:center;border-top:2px double #855d4c;border-bottom:2px double #855d4c;padding:7px;transform:rotate(4deg)}.atlas-stamp small{display:block;font:10px/1.8 serif}
+.atlas-visual-caption{font:10px/1 monospace;letter-spacing:.18em;position:absolute;bottom:22px;left:30px;color:#776857;direction:ltr}
+.atlas-principle {display:flex;gap:30px;align-items:flex-start;border-bottom:1px solid var(--line);padding:23px 8px 22px;max-width:1200px;margin:auto}
+.atlas-rule-number{font:22px/1.3 Georgia,serif;color:var(--accent);white-space:nowrap}
+.atlas-principle b{font-size:15px}.atlas-principle p{font-size:13px;line-height:1.75;margin:5px 0 0;color:var(--muted)}
+.atlas-section-heading{margin-top:68px;margin-bottom:22px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.atlas-section-heading h2{font:700 clamp(25px,2.5vw,38px)/1.25 "David",serif;letter-spacing:-.025em;margin:6px 0}
+.atlas-section-heading p{max-width:310px;font-size:12px;line-height:1.65;color:var(--muted);margin:0}
+.atlas-figure-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:15px}
+.atlas-figure-tab{display:flex;text-align:start;align-items:flex-start;flex-direction:column;background:#f9f5ec;border:1px solid var(--line);padding:17px 19px;cursor:pointer;min-height:125px;transition:background .15s ease,border-color .15s ease}
+.atlas-figure-tab:hover{background:#f1e8dc}.atlas-figure-tab.active{background:#354943;color:#fff;border-color:#354943}
+.atlas-figure-tab>span{font:17px/1 Georgia,serif;color:var(--accent);margin-bottom:12px}.atlas-figure-tab.active>span{color:#ddab8d}
+.atlas-figure-tab b{font-size:17px;font-family:"David","Noto Serif Hebrew",serif}.atlas-figure-tab small{margin-top:6px;font-size:12px;color:var(--muted)}.atlas-figure-tab.active small{color:#dadfd6}
+.atlas-feature{border:1px solid var(--line);background:var(--paper);box-shadow:0 12px 45px rgba(40,33,23,.04)}
+.atlas-feature-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.38fr);gap:30px;padding:30px 30px 24px;align-items:start}
+.atlas-feature-copy h3{font:700 clamp(27px,2.3vw,36px)/1.3 "Noto Serif Hebrew","David",serif;margin:10px 0 8px;letter-spacing:-.03em}
+.atlas-feature-copy p{font-size:14px;line-height:1.85;color:var(--muted);max-width:790px;margin:0}
+.atlas-feature-aside{border-inline-start:2px solid #c0a27c;padding:0 19px}.atlas-case-label{font-size:11px;color:var(--accent);font-weight:bold;letter-spacing:.08em;margin-bottom:7px}.atlas-feature-aside b{font:700 21px "David",serif}.atlas-feature-aside p{font-size:12px;line-height:1.7;color:var(--muted);margin:5px 0}
+.atlas-viz-stage{background:#ede9e1;position:relative;min-height:480px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.atlas-viz-prompt{min-height:480px;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:40px;text-align:center;background:radial-gradient(ellipse at center,#f6f3ec 5%,#e9e3d8 94%)}
+.atlas-viz-prompt[hidden]{display:none}.atlas-prompt-icon{font:56px Georgia,serif;color:var(--accent);margin-bottom:16px}.atlas-viz-prompt b{font:700 25px "David",serif}.atlas-viz-prompt p{font-size:13px;color:var(--muted);max-width:380px;line-height:1.75;margin:13px 0 26px}
+.atlas-viz-frame{width:100%;height:850px;border:0;background:white;display:block}.atlas-viz-frame[hidden]{display:none}
+.atlas-viz-footer{padding:15px 26px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.atlas-viz-footer>div{display:flex;gap:15px;flex-wrap:wrap}.atlas-link{background:transparent;border:0;border-bottom:1px solid var(--brand);color:var(--brand);cursor:pointer;padding:3px 0;font-weight:700}
+.atlas-method{font-size:12px;line-height:1.7;color:var(--muted);max-width:1100px;margin:23px 0 0;border-inline-start:2px solid var(--accent);padding-inline-start:12px}
+#atlasFigures{scroll-margin-top:30px}
+@media(max-width:1080px){.topbar{flex-wrap:wrap}.topbar-actions{max-width:100%}.atlas-hero{grid-template-columns:1fr .65fr}.atlas-hero-text{padding:33px}.atlas-hero-text p{font-size:14px}.atlas-feature-intro{grid-template-columns:1fr}}
+@media(max-width:700px){.edition-mark{display:none}.topbar{padding:14px 18px}.top-logos{display:none}.topbar-actions{gap:6px}.tabs{margin-bottom:12px}.tab-btn{padding:12px 11px}.atlas-hero{grid-template-columns:1fr}.atlas-hero-text{padding:35px 27px}.atlas-hero-visual{min-height:245px}.atlas-constellation{max-height:235px}.atlas-principle{gap:14px}.atlas-rule-number{font-size:15px}.atlas-section-heading{margin-top:43px;display:block}.atlas-figure-tabs{grid-template-columns:repeat(2,1fr)}.atlas-figure-tab{min-height:108px;padding:14px}.atlas-feature-intro{padding:20px;gap:17px}.atlas-viz-frame{height:760px}.atlas-feature-aside{border-inline-start:0;border-top:1px solid var(--line);padding:13px 0 0}.atlas-viz-footer{padding:16px}.grid-two{grid-template-columns:1fr}}
+
+#geoMap{height:auto;min-height:360px;overflow:hidden;display:flex;flex-direction:column}.geo-local-hint{font-size:12px;color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--line)}.geo-svg{width:100%;height:auto;min-height:340px;display:block}.geo-point{cursor:pointer;transition:fill .12s}.geo-point:hover,.geo-point:focus{fill:#265f58;stroke:#dfbd81;outline:none}

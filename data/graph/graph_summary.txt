@@ -1,0 +1,70 @@
+# Shem HaGedolim KG — multiplex assembly summary
+
+nodes: 5,124  (declared 4,948 + 0 semantic-only + places)
+edges: 130,613  = A structure 15,285 + B association 103,608 + C semantic 11,033 + C-place 765   (43 self-loops dropped)
+
+## node typology (4-way)
+  III_book_entry         2,033
+  II_person_external     632
+  IV_book_external       799
+  I_person_entry         1,484
+  V_place                176
+
+## Layer-C typed-relation distribution (person/book; incl. symmetric expansion)
+  cites            4,162
+  authored         2,584
+  contemporaryOf   776
+  relatedTo        729
+  relativeOf       648
+  teacherOf        559
+  commentaryOn     533
+  disputedWith     422
+  parentOf         238
+  basedOn          216
+  soulRootOf       68
+  glossOn          20
+
+## Layer-C place-relation distribution
+  printedIn        277
+  associatedWith   191
+  rabbiOf          137
+  fromPlace        56
+  livedIn          44
+  traveledTo       26
+  diedIn           20
+  buriedIn         8
+  bornIn           6
+
+## top 15 by structural centrality (a_in_degree = #entries invoking the node — the Hida's 'bookshelf' hubs)
+   189  G1096  person הרמב"ם (רבינו משה בר מיימון
+   168  G0646  person מרן מהר"ר יוסף קארו
+   143  S1268  book   סדר הדורות
+   119  G1321  person רש"י הוא רבינו שלמה יצחקי
+   113  G0813  person רבינו האר"י (ר' יצחק לוריא
+   113  G1108  person הרמב"ן (רבינו משה בן נחמן
+   103  G0429  person מה' חיים בנבנשת
+    99  S0029  book   אדרת אליהו
+    97  G0433  person מהר"ר חיים ויטאל
+    91  G0236  person רבינו אשר בן רבינו יחיאל
+    90  S0706  book   טורים
+    88  G1305  person הרשב"א (רבינו שלמה בן אברהם ן' אדרת
+    85  O0228  book   הש"ס (התלמוד)
+    80  S1862  book   שלחן ערוך
+    71  G0768  person הרי"ף
+
+## top 15 by semantic in-degree (c_in_wdeg = most cited / authored-by / commented-on)
+   232  G1096  person הרמב"ם (רבינו משה בר מיימון
+   135  G1321  person רש"י הוא רבינו שלמה יצחקי
+   123  G1108  person הרמב"ן (רבינו משה בן נחמן
+   105  G0646  person מרן מהר"ר יוסף קארו
+   105  S0706  book   טורים
+    95  S0029  book   אדרת אליהו
+    94  G0768  person הרי"ף
+    87  G0813  person רבינו האר"י (ר' יצחק לוריא
+    85  O0228  book   הש"ס (התלמוד)
+    85  S1862  book   שלחן ערוך
+    77  S0533  book   זהר
+    73  S0208  book   בית יוסף
+    72  G1305  person הרשב"א (רבינו שלמה בן אברהם ן' אדרת
+    71  G0236  person רבינו אשר בן רבינו יחיאל
+    62  O0337  book   יורה דעה

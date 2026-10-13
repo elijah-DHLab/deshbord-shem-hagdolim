@@ -1,0 +1,25 @@
+/* SHEM HAGDOLIM — source-aware shared language across all four research views */
+:root{--bg:#f6f7f2!important;--paper:#fffefa!important;--ink:#172d28!important;--text:#172d28!important;--muted:#60716a!important;--line:#d8e0d6!important;--accent:#b85c42!important;--person:#247a83!important;--book:#ac653e!important;--entry:#247a83!important;--external:#ac653e!important;--bookwin:#247a83!important;--authorwin:#ac653e!important;--neutral:#899588!important;--ego:#856389!important;--brand:#215c59!important;--shadow:none!important;--cite:#b85c42!important;--union:#72978d!important}
+html{scrollbar-gutter:stable}body{background:#fffefa!important;color:#172d28!important;font-family:Arial,"Noto Sans Hebrew",sans-serif!important}
+h1,h2,h3{font-family:David,"Noto Serif Hebrew",Georgia,serif!important;letter-spacing:-.02em}input,select,button{font-family:inherit!important;border-radius:3px!important}input:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid #215c59;outline-offset:2px}
+.panel,.top,.card,.chartbox,.case,.details,.note{border-radius:2px!important;box-shadow:none!important;background:#fffefa!important}
+button.active,.tab.active,.btn.active{background:#172d28!important;color:white!important;border-color:#172d28!important}
+body.embedded .wrap,body.embedded main{max-width:none!important;margin:0!important;padding:12px!important}
+body.embedded > .wrap > h1, body.embedded > .wrap > .sub{display:none!important}
+body.embedded .top h1,body.embedded .top .sub{display:none!important}
+body.embedded > header .title{display:none!important}
+body.embedded > header{padding:10px 14px!important;border:0!important;border-bottom:1px solid #d8e0d6!important;background:#fffefa!important}
+body.embedded header .headrow{align-items:center!important}
+body.embedded .controls{margin:0!important}
+body.embedded .panel,body.embedded .top{border-color:#d8e0d6!important}
+body.embedded .chartbox{border-color:#d8e0d6!important}
+body.embedded .note{line-height:1.7!important}
+body.embedded .tip,body.embedded .tooltip{max-width:310px}
+body.embedded .panels{gap:10px!important}
+body.embedded #app{height:790px!important;grid-template-columns:260px minmax(0,1fr) 305px!important;grid-template-rows:auto 1fr!important}
+body.embedded #controls,body.embedded #details{padding:12px!important}
+body.embedded header#figureHeader,body.embedded #app>header{background:#fffefa!important}
+body.embedded #app>header h1{font-size:15px!important;color:#172d28!important}
+body.embedded .mini-help{background:transparent}
+@media(max-width:1000px){body.embedded #app{height:auto!important;min-height:940px!important;grid-template-columns:1fr!important;grid-template-rows:auto auto 560px auto!important;grid-template-areas:"head" "controls" "canvas" "details"!important}body.embedded #controls,body.embedded #details{max-height:280px;overflow:auto;min-width:0}body.embedded .panels{grid-template-columns:1fr!important}}
+@media(max-width:650px){body.embedded .charts,body.embedded .details{grid-template-columns:1fr!important}body.embedded .panels{grid-template-columns:1fr!important}}

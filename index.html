@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>שם הגדולים | מפתח חי · The Living Index</title>
+  <link rel="stylesheet" href="assets/style.css?v=__BUILD_VERSION__" />
+  <link rel="stylesheet" href="assets/editorial.css?v=__BUILD_VERSION__" />
+  <link rel="stylesheet" href="assets/living-index.css?v=__BUILD_VERSION__" />
+  <link rel="icon" type="image/svg+xml" href="assets/reference-mark.svg" />
+  <link rel="stylesheet" href="assets/research-redesign.css?v=20261013-v13" /><link rel="stylesheet" href="assets/v14.css?v=20261013-v14" />
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <a class="brand-link go-home" href="./" aria-label="שם הגדולים — חזרה לעמוד הבית" title="חזרה למפת הידע">
+      <img class="project-symbol" src="assets/reference-mark.svg" alt="" />
+      <span class="brand-type"><span class="brand-kicker" data-research-he="אטלס למחקר המסורת" data-research-en="AN ATLAS OF TEXTUAL TRADITION">אטלס למחקר המסורת</span><strong id="appTitle" data-research-he="שם הגדולים" data-research-en="Shem HaGdolim">שם הגדולים</strong><span class="brand-caption" id="appSubtitle" data-research-he="מן הערך אל הרשת" data-research-en="FROM ENTRY TO NETWORK">מן הערך אל הרשת</span></span>
+    </a>
+    <div class="masthead-spine" aria-hidden="true"><span></span><i></i><span></span></div>
+    <div class="masthead-center" data-research-he="כל שם פותח סיפור של קשרים" data-research-en="EVERY NAME OPENS A NETWORK OF CONNECTIONS">כל שם פותח סיפור של קשרים</div>
+    <div class="header-right">
+      <div class="institutional-logos">
+        <a class="go-home partner-link" href="./" aria-label="חזרה לעמוד הבית — סמל המיזם"><img src="logo/light.png" alt="סמל המיזם"></a>
+        <a class="go-home partner-link" href="./" aria-label="חזרה לעמוד הבית — סמל המוסד"><img src="logo/Mbz.jpg" alt="סמל המוסד"></a>
+      </div>
+      <button id="mobileSettingsToggle" class="mobile-settings-toggle" type="button" aria-expanded="false" aria-controls="headerSettings" data-research-he="הגדרות" data-research-en="Settings">הגדרות</button>
+      <div class="topbar-actions" id="headerSettings">
+        <div class="setting"><label class="mode-label" for="dataMode" data-i18n="graph_mode">מצב גרף</label><select id="dataMode"><option value="lite" selected>Lite</option><option value="full">Full</option></select></div>
+        <label class="setting-check"><input type="checkbox" id="toggleNodeLabels" checked /> <span data-i18n="show_node_labels">שמות צמתים</span></label>
+        <label class="setting-check"><input type="checkbox" id="toggleEdgeLabels" /> <span data-i18n="show_edge_labels">שמות קשרים</span></label>
+        <button id="langToggle" class="btn ghost" type="button">English</button>
+        <span class="action-with-info"><button id="saveState" class="btn ghost" type="button" data-i18n="copy_link">העתק קישור</button></span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <nav class="tabs" id="tabs" aria-label="Main navigation"></nav>
+    <div class="contextbar" id="contextbar"><strong id="selectedEntityTitle" class="sr-only" data-i18n="selected_entity">Selected entity:</strong><span class="context-eyebrow" data-research-he="הישות הפעילה" data-research-en="ACTIVE ENTITY">הישות הפעילה</span><span class="context-entity" id="selectedEntityLabel">—</span><span class="context-spacer"></span><button id="contextToAtlas" type="button" class="context-action" data-research-he="הביתה" data-research-en="Home">הביתה</button><button id="contextToData" type="button" class="context-action" data-research-he="נתוני המקור" data-research-en="Source data">נתוני המקור</button><button id="contextToPerson" type="button" class="context-action" data-research-he="ניתוח הישות ←" data-research-en="Analyze entity →">ניתוח הישות ←</button></div>
+    <section class="panel active" id="tab-atlas">
+      <div class="folio-hero">
+        <div class="folio-copy">
+          <div class="folio-number"><span class="thread-cross" aria-hidden="true"></span><span data-research-he="ספר שמות. עולם של קשרים." data-research-en="A book of names. A world of connections.">ספר שמות. עולם של קשרים.</span><b>01 / INDEX</b></div>
+          <h2 ><span data-research-he="כל ערך הוא שער." data-research-en="Every entry is a doorway.">כל ערך הוא שער.</span><span class="title-echo" data-research-he="כל אזכור הוא מסלול." data-research-en="Every mention, a path.">כל אזכור הוא מסלול.</span></h2>
+          <p class="folio-lead" data-research-he="החיד״א אסף אנשים, חיבורים ועדויות. בתוך שם הגדולים הם נעשו למארג של זיקות — חלקן מפורשות, אחרות נוצרות מעצם הופעתן זו לצד זו." data-research-en="The Hida gathered people, books and testimonies. Shem HaGdolim arranges them into a fabric of relations: some explicit, others formed by their proximity in the text.">החיד״א אסף אנשים, חיבורים ועדויות. בתוך שם הגדולים הם נעשו למארג של זיקות — חלקן מפורשות, אחרות נוצרות מעצם הופעתן זו לצד זו.</p>
+          <div class="primary-search" role="search" aria-label="חיפוש ישות למחקר">
+            <label for="heroEntitySearch" data-research-he="מצאו אדם או ספר — ופתחו את הניתוח שלו" data-research-en="Find a person or book — open its analysis">מצאו אדם או ספר — ופתחו את הניתוח שלו</label>
+            <div class="search-input-wrap"><span class="search-symbol" aria-hidden="true">⌕</span><input id="heroEntitySearch" type="search" placeholder="הקלידו שם חכם, חיבור או מזהה…" aria-label="חיפוש שם" autocomplete="off" aria-autocomplete="list" aria-controls="heroSearchResults" aria-expanded="false" /><button id="heroSearchSubmit" type="button" data-research-he="לניתוח ←" data-research-en="Analyze →">לניתוח ←</button></div>
+            <div id="heroSearchResults" class="hero-search-results" role="listbox" hidden></div>
+          </div>
+          <div class="example-links"><span data-research-he="נקודות כניסה" data-research-en="START WITH">נקודות כניסה</span><button type="button" data-open-id="G0646">ר׳ יוסף קארו</button><button type="button" data-open-id="G1096">הרמב״ם</button><button type="button" data-open-id="S0208">בית יוסף</button></div>
+        </div>
+        <div class="folio-map">
+          <div class="folio-map-header"><div><span class="folio-map-index">RESEARCH MAP / 001</span><h3 data-research-he="רשת פתוחה" data-research-en="An open network">רשת פתוחה</h3></div><p data-research-he="מפת נתונים חיה: לחצו על שם כדי לעבור לצומת הבא, או פתחו ניתוח מפורט." data-research-en="Links from the corpus. Select a name to analyze.">מפת נתונים חיה: לחצו על שם כדי לעבור לצומת הבא, או פתחו ניתוח מפורט.</p></div>
+          <div class="map-stage" id="heroMapStage" aria-label="מפת קשרים אינטראקטיבית, בחירת שם מתקדמת לסביבתו">
+             <svg id="heroNetwork" viewBox="0 0 940 590" role="group" aria-label="קשרי אנשים וספרים"></svg>
+             <div class="map-loading" id="heroMapLoading">טוען נתוני רשת…</div>
+             <div id="heroMapTooltip" class="map-tooltip" hidden></div>
+          </div>
+          <div class="map-explorer-tools"><div class="map-jump"><label for="mapEntityJump" data-research-he="בחרו כל מוקד בקורפוס" data-research-en="Search all entities">בחרו כל מוקד בקורפוס</label><input id="mapEntityJump" type="search" list="mapEntityCandidates" placeholder="שם אדם, חיבור, מקום או ID" autocomplete="off"><datalist id="mapEntityCandidates"></datalist><button id="mapJumpGo" type="button" data-research-he="התחל מכאן ←" data-research-en="Start here →">התחל מכאן ←</button></div><div class="map-breadcrumb" id="mapBreadcrumb" aria-label="מסלול החקירה"></div><div class="map-explorer-actions"><button type="button" id="mapBack" title="חזור לצומת קודם">↶ חזור</button><button type="button" id="mapForward" title="לצומת הבא">קדימה ↷</button><button type="button" id="mapFit" title="החזר קנה מידה">⤧ התאמה</button><button type="button" data-fullscreen="#heroMapStage" title="רשת במסך מלא">⛶ מסך מלא</button></div></div><div class="map-current" id="mapCurrent"><span>לחצו על שם ברשת כדי להרחיב את סביבתו. לחצו על ״ניתוח מלא״ למעבר אל מסך הישות.</span></div><div class="map-bottom"><div class="edge-modes" role="group" aria-label="שכבת קשרים"><button type="button" class="active" data-edge-mode="all" data-research-he="מבנה ויחסים (A+C)" data-research-en="Structure + explicit (A+C)">מבנה ויחסים (A+C)</button><button type="button" data-edge-mode="explicit" data-research-he="יחסים מפורשים" data-research-en="Explicit">יחסים מפורשים</button><button type="button" data-edge-mode="mentions" data-research-he="אזכורים" data-research-en="Mentions">אזכורים</button></div><div class="map-bottom-actions"><label class="map-limit-label" for="mapLimit">שכנים <select id="mapLimit"><option value="8">8</option><option value="16" selected>16</option><option value="28">28</option><option value="42">42</option></select></label><button type="button" id="heroMapNext" class="map-next" data-research-he="מוקד אחר ↺" data-research-en="Another starting point ↺">מוקד אחר ↺</button></div></div>
+        </div>
+      </div>
+      <div class="argument-strip"><div class="argument-heading"><span class="line-kicker">READING THE WORK</span><h3 data-research-he="שלוש דרכים לראות קשר" data-research-en="Three kinds of connections">שלוש דרכים לראות קשר</h3></div><div><span class="trace-symbol trace-one" aria-hidden="true"></span><b data-research-he="אזכור" data-research-en="Mention">אזכור</b><p data-research-he="שם שנוכח בתוך ערך" data-research-en="A name in an entry">שם שנוכח בתוך ערך</p></div><div><span class="trace-symbol trace-two" aria-hidden="true"></span><b data-research-he="קרבה טקסטואלית" data-research-en="Co-occurrence">קרבה טקסטואלית</b><p data-research-he="הופעה משותפת אינה יחס ישיר" data-research-en="Proximity is not a direct tie">הופעה משותפת אינה יחס ישיר</p></div><div><span class="trace-symbol trace-three" aria-hidden="true"></span><b data-research-he="יחס מפורש" data-research-en="Explicit relation">יחס מפורש</b><p data-research-he="טענה הנאמרת במקור" data-research-en="A relationship asserted in the text">טענה הנאמרת במקור</p></div></div>
+      <div class="folio-after"><p data-research-he="המפתח מסדר את הידע; המחקר בוחן כיצד הסידור עצמו יוצר נראות, סמכות וקשר. המשיכו מכאן למפות המחקר, לנתונים או לקריאת מקור." data-research-en="The index organizes knowledge. Research asks how that organization creates visibility, authority and relation. Continue to research figures, data or source text.">המפתח מסדר את הידע; המחקר בוחן כיצד הסידור עצמו יוצר נראות, סמכות וקשר. המשיכו מכאן למפות המחקר, לנתונים או לקריאת מקור.</p><div><button class="route-action" data-target="lenses" data-research-he="מפות המחקר ↗" data-research-en="Research figures ↗">מפות המחקר ↗</button><button class="route-action" data-target="data" data-research-he="מפתח הישויות ↗" data-research-en="Entity index ↗">מפתח הישויות ↗</button><button class="route-action" data-target="networks" data-research-he="רשת הקשרים ↗" data-research-en="Network ↗">רשת הקשרים ↗</button></div></div>
+    </section>
+    <section class="panel" id="tab-lenses">
+      <div class="lenses" id="atlasFigures">
+        <div class="lenses-intro"><div><span class="eyebrow" data-research-he="מפות מחקר · קריאה בשני קני מידה" data-research-en="RESEARCH LENSES · READING AT TWO SCALES">מפות מחקר · קריאה בשני קני מידה</span><h2 data-research-he="ארבע שאלות. קורפוס אחד." data-research-en="Four questions. One corpus.">ארבע שאלות. קורפוס אחד.</h2></div><p data-research-he="הדמיות אינן תוספת חיצונית: בחרו שאלה, חקרו אותה, והעבירו ישות אל הרשת, המפתח או מקור הטקסט." data-research-en="Visualizations are a research tool: choose a question, examine it, and follow an entity into the network, index or source text.">הדמיות אינן תוספת חיצונית: בחרו שאלה, חקרו אותה, והעבירו ישות אל הרשת, המפתח או מקור הטקסט.</p></div>
+        <div id="atlasFigureTabs" class="lens-tabs" role="tablist" aria-label="שאלות מחקר">
+         <button class="lens-tab active" data-viz="entry" role="tab" aria-selected="true"><span>01</span><b data-research-he="ערך ונראות" data-research-en="Entry & visibility">ערך ונראות</b><small data-research-he="מי מקבל ערך?" data-research-en="Who gets an entry?">מי מקבל ערך?</small></button>
+         <button class="lens-tab" data-viz="personbook" role="tab" aria-selected="false"><span>02</span><b data-research-he="אדם וספר" data-research-en="Person & book">אדם וספר</b><small data-research-he="שני מסלולי נוכחות" data-research-en="Two kinds of presence">שני מסלולי נוכחות</small></button>
+         <button class="lens-tab" data-viz="centrality" role="tab" aria-selected="false"><span>03</span><b data-research-he="מרכזיות ותיווך" data-research-en="Centrality & mediation">מרכזיות ותיווך</b><small data-research-he="מרכזיות ביחס לאיזו שאלה?" data-research-en="Central under which metric?">מרכזיות ביחס לאיזו שאלה?</small></button>
+         <button class="lens-tab" data-viz="hida" role="tab" aria-selected="false"><span>04</span><b data-research-he="החיד״א כעד" data-research-en="The Hida as witness">החיד״א כעד</b><small data-research-he="ראיתי · שמעתי · מצאתי" data-research-en="Saw · heard · found">ראיתי · שמעתי · מצאתי</small></button>
+        </div>
+        <section class="corpus-bridge" aria-labelledby="corpusBridgeHeading"><div class="corpus-bridge-top"><div><span class="eyebrow">CORPUS / LIVE DATA</span><h3 id="corpusBridgeHeading">מן השאלה אל הנתונים</h3><p>בכל אחת מארבע השאלות אפשר לאתר ישויות, לראות את המדדים שלהן ולהמשיך ישירות אל הניתוח, הרשת או המקור.</p></div><div class="corpus-stats" id="corpusStats" aria-live="polite"></div></div><div class="corpus-controls"><label>חיפוש בכל הקורפוס <input id="lensEntitySearch" list="nodeNameList" type="search" placeholder="חכם, ספר, מקום או מזהה…"></label><label>סוג ישות <select id="lensRankKind"><option value="all">הכול</option><option value="person">אישים</option><option value="book">חיבורים</option><option value="place">מקומות</option></select></label><label>מיון לפי <select id="lensRankMetric"><option value="a_in_degree">מספר ערכים מזכירים</option><option value="c_in_wdeg">יחסים נכנסים</option><option value="c_out_wdeg">יחסים יוצאים</option></select></label><label>מספר תוצאות <select id="lensRankSize"><option value="10">10</option><option value="25" selected>25</option><option value="50">50</option><option value="100">100</option></select></label></div><div class="corpus-selection" id="corpusSelection" hidden></div><div id="corpusRanked" class="corpus-rank" aria-live="polite"></div><div class="corpus-bridge-foot"><button type="button" id="corpusAllData">כל 5,124 הישויות במפתח ←</button><span id="corpusRankNote"></span></div></section><div class="research-workbench">
+          <div class="lens-heading"><span class="lens-counter" id="atlasVizTag">איור 1 · המאמר</span><div><h3 id="atlasVizTitle">נראות איננה שקולה לערך עצמאי</h3><p id="atlasVizDesc">מי זוכה לערך עצמאי ומי מופיע רק בערכי אחרים?</p></div></div>
+          <div class="research-body">
+            <div class="research-chart-column">
+              <button class="figure-fullscreen-cta" type="button" data-fullscreen="#atlasVizStage">⛶ מסך מלא</button><div class="atlas-viz-stage" id="atlasVizStage"><div class="atlas-viz-prompt" id="atlasVizPrompt"><div class="lens-loading-glyph">א</div><p data-research-he="ההדמיה נטענת עם פתיחת השאלה" data-research-en="The view loads when you open the research question">ההדמיה נטענת עם פתיחת השאלה</p><button type="button" id="atlasOpenViz" class="btn" data-research-he="הצג הדמיה" data-research-en="Open view">הצג הדמיה</button></div></div>
+            </div>
+            <aside class="research-margin"><div class="reading-guide" id="lensReadingGuide"></div><span class="margin-heading" data-research-he="מפתח לקריאה" data-research-en="READING GUIDE">מפתח לקריאה</span><h4 id="atlasCaseTitle">ספר יוחסין</h4><p id="atlasCaseBody">נוכחות חוזרת אינה בהכרח ערך עצמאי.</p><div class="research-links"><div class="margin-heading" data-research-he="המשך חקירה" data-research-en="CONTINUE EXPLORING">המשך חקירה</div><button id="atlasGoData" class="margin-action" type="button" data-research-he="המפתח והנתונים ←" data-research-en="Index & data →">המפתח והנתונים ←</button><button id="atlasGoPerson" class="margin-action" type="button" data-research-he="רשת אישית ←" data-research-en="Personal network →">רשת אישית ←</button><button id="atlasGoNetwork" class="margin-action" type="button" data-research-he="רשת הקשרים הכללית ←" data-research-en="Global network →">רשת הקשרים הכללית ←</button><button id="atlasGoSource" class="margin-action" type="button" data-research-he="חזרה למקור ←" data-research-en="Return to source →">חזרה למקור ←</button></div><p class="margin-caveat" data-research-he="התצוגה מציגה את ארגון הידיעות בחיבור, ולא שחזור מלא של היחסים ההיסטוריים." data-research-en="The visualization represents the organization of claims within the work, not a comprehensive historical reconstruction.">התצוגה מציגה את ארגון הידיעות בחיבור, ולא שחזור מלא של היחסים ההיסטוריים.</p></aside>
+          </div>
+          <div class="lens-footer"><span id="atlasVizStatus">הדמיה זמינה</span><button id="atlasViewReset" class="margin-action" type="button" data-research-he="איפוס בחירה" data-research-en="Clear selection">איפוס בחירה</button><span class="research-source" data-research-he="המסד: מהדורת בן־יעקב, וילנה תרי״ב (1852)" data-research-en="Corpus: Ben-Jacob edition, Vilna 1852">המסד: מהדורת בן־יעקב, וילנה תרי״ב (1852)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="tab-reports">
+      <article class="card help-card">
+        <h2 data-i18n="reports_title">דוחות + שיטות</h2>
+        <p data-i18n="reports_help">כאן נמצאים הדוחות המחקריים, שיטות המחקר, והסבר על הגרפים המקוריים (F1–F20) עם קישור ישיר לנתונים ולתשאול.</p>
+      </article>
+      <div class="toolbar wrap">
+        <label for="reportSelect" data-i18n="reports_choose">Choose document:</label>
+        <select id="reportSelect"></select>
+        <button class="btn ghost jump-tab" data-tab="data" data-i18n="goto_data">Go To Data+Source</button>
+        <button class="btn ghost jump-tab" data-tab="networks" data-i18n="goto_networks">Go To Networks</button>
+      </div>
+      <div class="grid-two">
+        <article class="card markdown" id="reportContent"></article>
+        <article class="card">
+          <h2 data-i18n="figures_title">Original Figures Explained</h2>
+          <div class="toolbar wrap">
+            <select id="figureSelect"></select>
+          </div>
+          <button type="button" class="zoom-figure" data-zoom="#figurePreview" data-research-he="הגדל איור" data-research-en="Enlarge figure">הגדל איור ↗</button><img id="figurePreview" alt="figure" style="width:100%; border:1px solid #dfe6eb; border-radius:8px;" />
+          <p id="figureExplanation"></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="tab-data"><div class="workspace-bridge"><span data-research-he="מחקר הקשור למרחב זה" data-research-en="RELATED RESEARCH LENS">מחקר הקשור למרחב זה</span><button type="button" class="goto-lens" data-viz="entry">נראות והדרה · פתיחת הדמיית ערכים ואזכורים ←</button></div>
+      <article class="card help-card">
+        <h2 data-i18n="data_title">נתונים גולמיים + טקסט מקור</h2>
+        <p data-i18n="data_help">חיפוש לפי שם ערך/דמות (לא רק ID), סינון סוגי קודקודים, ולחיצה על "מקור" כדי לראות את הטקסט המקורי.</p>
+      </article>
+      <div class="grid-two">
+        <article class="card">
+          <div class="toolbar wrap">
+            <input id="nodeSearch" type="search" list="nodeNameList" placeholder="חפש לפי שם/ערך" data-i18n-ph="search_node" />
+            <datalist id="nodeNameList"></datalist>
+            <label class="stack-label"><span data-i18n="node_kinds">Node kinds</span><select id="kindFilter" multiple size="3"></select></label>
+            <label class="stack-label"><span data-i18n="node_classes">Node classes</span><select id="fourWayFilter" multiple size="4"></select></label>
+            <label class="stack-label"><span data-i18n="communities">Communities</span><select id="communityFilter" multiple size="4"></select></label>
+            <label><span data-i18n="raw_min_prominence">Min prominence</span><input id="minProm" type="number" min="0" value="0" /></label>
+            <button id="exportNodes" class="btn ghost" data-i18n="export_csv">Export CSV</button>
+          </div>
+          <div id="nodeTableWrap" class="table-wrap"></div>
+        </article>
+        <article class="card">
+          <div class="toolbar wrap">
+            <input id="sourceSearch" placeholder="חפש בטקסט מקור" data-i18n-ph="search_source" />
+            <button id="runSourceSearch" class="btn" data-i18n="search">Search</button>
+          </div>
+          <div id="sourceHits" class="table-wrap"></div>
+          <pre id="sourceContext"></pre>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="tab-networks"><div class="workspace-bridge"><span data-research-he="מחקר הקשור למרחב זה" data-research-en="RELATED RESEARCH LENS">מחקר הקשור למרחב זה</span><button type="button" class="goto-lens" data-viz="centrality">מרכזיות ותיווך · השוואת רשתות ←</button></div>
+      <article class="card help-card">
+        <h2 data-i18n="networks_title">רשתות רחבות + חיתוכים</h2>
+        <p data-i18n="networks_help">אפשר לסנן לפי שכבה, סוג קשת, סוג קודקוד מקור/יעד, ולבנות רשת כללית. כולל מדדי רשת, קהילות, וזרימות בין סוגי ישויות.</p>
+      </article>
+      <article class="card">
+        <h3 data-i18n="global_network_title">Global Network (Main Workspace)</h3>
+        <p class="mini-help" data-i18n="global_network_help">כאן רואים את התמונה הרחבה של הרשת. אין חובה לבחור אדם; אפשר לסנן שכבות/קשרים/סוגי קודקודים/קהילות ולבנות מבט-על.</p>
+        <div class="toolbar wrap">
+          <input id="seedNode" list="nodeNameList" placeholder="Optional focus node: name or ID" data-i18n-ph="seed_node" />
+          <label class="stack-label"><span data-i18n="layers">Layers</span><select id="networkLayerFilter" multiple size="3"></select></label>
+          <label class="stack-label"><span data-i18n="predicates">Predicates</span><select id="networkPredicateFilter" multiple size="6"></select></label>
+          <label class="stack-label"><span data-i18n="node_kinds">Node kinds</span><select id="networkNodeKindFilter" multiple size="3"></select></label>
+          <label class="stack-label"><span data-i18n="layout_mode">Layout</span><select id="networkLayoutPreset">
+            <option value="force" data-i18n="layout_force">Force (organic)</option>
+            <option value="degree_rings" selected data-i18n="layout_degree_rings">Degree rings (20/20/core)</option>
+            <option value="bipartite" data-i18n="layout_bipartite">Bipartite (books/people)</option>
+            <option value="community_clusters" data-i18n="layout_community_clusters">Community clusters</option>
+          </select></label>
+          <label class="stack-label"><span data-i18n="analysis_mode">Analysis mode</span><select id="networkColorBy">
+            <option value="kind" selected data-i18n="color_kind">Color by Kind</option>
+            <option value="network_communities" data-i18n="color_network_communities">Communities in Network</option>
+            <option value="role" data-i18n="color_role">Color by Role</option>
+            <option value="degree" data-i18n="color_degree">Degree centrality</option>
+            <option value="in_degree" data-i18n="color_in_degree">In-degree centrality</option>
+            <option value="out_degree" data-i18n="color_out_degree">Out-degree centrality</option>
+            <option value="weighted_degree" data-i18n="color_weighted_degree">Weighted degree</option>
+            <option value="pagerank" data-i18n="color_pagerank">PageRank</option>
+            <option value="clustering" data-i18n="color_clustering">Clustering coefficient</option>
+          </select></label>
+          <div id="networkCommunityControls" class="community-controls hidden">
+            <label class="stack-label"><span data-i18n="communities">Communities</span><select id="networkCommunityFilter" multiple size="6"></select></label>
+            <label><span data-i18n="community_split_count">Communities to compute (K)</span> <input id="networkCommunityCount" type="number" min="2" max="30" value="8" /></label>
+            <label><input type="checkbox" id="networkSeparateCommunities" checked /> <span data-i18n="separate_communities">Visually separate communities</span></label>
+          </div>
+          <label><span data-i18n="hops">Hops</span> <input id="networkHops" type="number" min="1" max="3" value="1" /></label>
+          <label><span data-i18n="max_edges">Max edges</span> <input id="networkMaxEdges" type="number" min="50" max="6000" value="1200" /></label>
+          <button id="buildNetwork" class="btn" data-i18n="build_global">Build Global Network</button>
+          <button id="toggleNetworkFullscreen" class="btn ghost" data-i18n="maximize_graph">Maximize Graph</button>
+          <button id="downloadGlobalPng" class="btn ghost" data-i18n="download_png">Download PNG</button>
+        </div>
+        <div id="networkStage" class="network-stage">
+          <div id="network"></div>
+        </div>
+        <div id="networkInfo"></div>
+        <div id="networkMetrics" class="metrics-grid"></div>
+      </article>
+      <article class="card">
+        <h3 data-i18n="network_functions">Network Functions (How to Use)</h3>
+        <ul class="explain-list" id="networkFunctions"></ul>
+      </article>
+
+      <div class="toolbar wrap">
+        <label class="stack-label"><span data-i18n="layers">Layers</span><select id="layerFilter" multiple size="3"></select></label>
+        <label class="stack-label"><span data-i18n="predicates">Predicates</span><select id="predicateFilter" multiple size="6"></select></label>
+        <label class="stack-label"><span data-i18n="source_kinds">Source kinds</span><select id="sourceKindFilter" multiple size="3"></select></label>
+        <label class="stack-label"><span data-i18n="target_kinds">Target kinds</span><select id="targetKindFilter" multiple size="3"></select></label>
+        <input id="sourceNodeFilter" list="nodeNameList" placeholder="מקור: שם או ID" data-i18n-ph="source_node" />
+        <input id="targetNodeFilter" list="nodeNameList" placeholder="יעד: שם או ID" data-i18n-ph="target_node" />
+        <button id="runEdgeQuery" class="btn" data-i18n="run_query">Run Query</button>
+        <button id="exportEdges" class="btn ghost" data-i18n="export_result">Export Result CSV</button>
+      </div>
+      <div class="grid-two">
+        <article class="card">
+          <div id="edgeStats"></div>
+          <div id="edgeTableWrap" class="table-wrap"></div>
+        </article>
+        <article class="card">
+          <div id="predicateLayerHeat"></div>
+          <div id="flowSankey"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="tab-person"><div class="workspace-bridge"><span data-research-he="מחקר הקשור למרחב זה" data-research-en="RELATED RESEARCH LENS">מחקר הקשור למרחב זה</span><button type="button" class="goto-lens" data-viz="personbook">אדם וספר · נוכחות המחבר מול חיבוריו ←</button></div>
+      <section id="entityInsight" class="entity-insight" hidden aria-live="polite"><div class="entity-insight-heading"><span class="entity-category" id="entityInsightKind">ENTITY RECORD</span><h2 id="entityInsightName"></h2><span id="entityInsightId"></span></div><div class="entity-insight-numbers"><div><strong id="insightMentions">—</strong><span data-research-he="ערכים מזכירים" data-research-en="Mentioning entries">ערכים מזכירים</span></div><div><strong id="insightIncoming">—</strong><span data-research-he="יחסים נכנסים" data-research-en="Incoming ties">יחסים נכנסים</span></div><div><strong id="insightOutgoing">—</strong><span data-research-he="יחסים יוצאים" data-research-en="Outgoing ties">יחסים יוצאים</span></div></div><div class="entity-insight-actions"><button type="button" id="insightOpenSource" data-research-he="לטקסט המקור ↗" data-research-en="Source text ↗">לטקסט המקור ↗</button><button type="button" id="insightOpenNetwork">לרשת הפתוחה ↗</button><button type="button" id="insightOpenData" data-research-he="לרשומת הנתונים ↗" data-research-en="Data record ↗">לרשומת הנתונים ↗</button></div></section>
+      <article class="card help-card">
+        <h2 data-i18n="person_title">רשתות וניתוח אישי של דמויות</h2>
+        <p data-i18n="person_help">רשת אגו, גרף עץ מסורות לפי קריטריון, ומידע תקופתי מ-Wikidata (שנים/תקופה).</p>
+      </article>
+      <div class="toolbar wrap">
+        <input id="personInput" list="nodeNameList" placeholder="בחר דמות/ערך" data-i18n-ph="person_input" />
+        <label class="stack-label"><span data-i18n="tradition_types">Tradition types</span><select id="personTreePredicate" multiple size="4">
+          <option value="teacherOf" selected>teacherOf</option>
+          <option value="soulRootOf">soulRootOf</option>
+          <option value="commentaryOn">commentaryOn</option>
+          <option value="authored">authored</option>
+        </select></label>
+        <select id="personTreeDirection">
+          <option value="out" selected data-i18n="forward">Forward</option>
+          <option value="in" data-i18n="backward">Backward</option>
+          <option value="both" data-i18n="both">Both</option>
+        </select>
+        <select id="personTreeLayout">
+          <option value="breadth" selected data-i18n="layout_tree">Tree layout</option>
+          <option value="radial" data-i18n="layout_radial">Radial layout</option>
+        </select>
+        <label><span data-i18n="depth">Depth</span> <input id="personTreeDepth" type="number" min="1" max="5" value="3" /></label>
+        <label><span data-i18n="fanout">Max children per node</span> <input id="personTreeFanout" type="number" min="2" max="20" value="8" /></label>
+        <button id="analyzePerson" class="btn" data-i18n="analyze_person">Analyze Person</button>
+        <button id="openPersonSource" class="btn ghost" data-i18n="open_source">Open Source Text</button>
+        <button id="downloadTreePng" class="btn ghost" data-i18n="download_tree_png">Download Tree PNG</button>
+      </div>
+      <div class="grid-two">
+        <article class="card">
+          <h2 data-i18n="ego_network">Ego Network</h2>
+          <div id="egoNetwork"></div>
+        </article>
+        <article class="card">
+          <h2 data-i18n="tradition_tree">Tradition Tree</h2>
+          <div id="treeNetwork"></div>
+          <div id="traditionSummary" class="mini-help"></div>
+        </article>
+      </div>
+      <article class="card">
+        <h3 data-i18n="tradition_explain_title">What Tradition Tree Gives You</h3>
+        <div id="traditionExplain" class="mini-help"></div>
+      </article>
+      <div class="grid-two">
+        <article class="card">
+          <h2 data-i18n="person_metrics">Person Metrics</h2>
+          <div id="personStats" class="metrics-grid"></div>
+        </article>
+        <article class="card">
+          <h2 data-i18n="wikidata_title">Wikidata Time/Period</h2>
+          <div id="wikidataBox"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="tab-geo"><div class="workspace-bridge"><span data-research-he="מחקר הקשור למרחב זה" data-research-en="RELATED RESEARCH LENS">מחקר הקשור למרחב זה</span><button type="button" class="goto-lens" data-viz="hida">החיד״א כעד · קריאה, ראייה ותנועה ←</button></div>
+      <article class="card help-card">
+        <h2 data-i18n="geo_title">גיאוגרפיה</h2>
+        <p data-i18n="geo_help">מפת קשרי מקום + פונקציית Network-on-Map שמציירת קישורים בין מקומות לפי רשת סמנטית. הפאנל הימני הוא פאנל אופציונלי לרשומות מקושרות לכל מקום.</p>
+      </article>
+      <div class="toolbar wrap">
+        <label class="stack-label"><span data-i18n="predicates">Predicates</span><select id="geoPredicateFilter" multiple size="6"></select></label>
+        <label><span data-i18n="heat_radius">Heat radius</span> <input id="heatRadius" type="number" min="5" max="40" value="18" /></label>
+        <label><input type="checkbox" id="geoNetworkOverlay" /> <span data-i18n="overlay_map">Overlay network on map</span></label>
+        <label class="stack-label hidden" id="geoOverlayPredicateWrap"><span data-i18n="overlay_predicates">Overlay predicates</span><select id="geoOverlayPredicate" multiple size="6"></select></label>
+        <button id="drawGeo" class="btn" data-i18n="draw_map">Draw Map</button>
+      </div>
+      <div class="grid-two">
+        <article class="card"><div id="geoMap"></div></article>
+        <article class="card" id="geoRecordsCard">
+          <h3 data-i18n="geo_records_title">Linked Records By Place</h3>
+          <p class="mini-help" data-i18n="geo_records_help">Choose a place on the map to inspect linked entities and source records.</p>
+          <div id="placeTableWrap" class="table-wrap"></div>
+          <div id="geoRecordsWrap" class="table-wrap" style="margin-top:.65rem;"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="tab-validation">
+      <article class="card">
+        <h2 data-i18n="validation_title">Validation</h2>
+        <button id="runValidation" class="btn" data-i18n="run_validation">Run Validation</button>
+        <div id="validationResult"></div>
+      </article>
+      <article class="card">
+        <h2 data-i18n="extra_visuals">Extra Visualizations From Web Research</h2>
+        <ul id="extraFeatures"></ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <small id="footerNote"></small>
+  </footer>
+
+  <div id="infoModal" class="info-modal hidden" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
+    <div class="info-modal-card">
+      <div class="info-modal-head">
+        <h3 id="infoModalTitle" data-i18n="info_title">Info</h3>
+        <button id="closeInfoModal" class="btn ghost" type="button" data-i18n="close">Close</button>
+      </div>
+      <div id="infoModalBody" class="info-modal-body"></div>
+    </div>
+  </div>
+
+  <script src="assets/vendor/marked.js"></script>
+  <script>window.__BUILD_VERSION__ = "__BUILD_VERSION__";</script>
+  <script src="assets/living-index.js?v=__BUILD_VERSION__" defer></script>
+
+  <script src="assets/atlas.js?v=__BUILD_VERSION__" defer></script>
+  <script src="assets/app.js?v=__BUILD_VERSION__"></script>
+  <script defer src="assets/research-redesign.js?v=20261013-v13"></script>
+  <script src="assets/v14.js?v=20261013-v14" defer></script>
+</body>
+</html>
